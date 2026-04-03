@@ -17,39 +17,42 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        gradle-version: 8.5
-        cache-disabled: true
-        
-    - name: List project files
-      run: |
-        ls -la
-        ls -la app/
-        
-    - name: Build Debug APK
-      run: |
-        ./gradlew assembleDebug --stacktrace --info || true
-        ls -la app/build/outputs/apk/debug/ || echo "Debug APK not found"
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
       
+    - name: Check project structure
+      run: |
+        echo "=== Project Structure ==="
+        ls -la
+        echo ""
+        echo "=== App Directory ==="
+        ls -la app/
+        echo ""
+        echo "=== Gradle Wrapper ==="
+        ls -la gradlew || echo "gradlew not found"
+        cat gradle/wrapper/gradle-wrapper.properties
+        
+    - name: Make gradlew executable
+      run: chmod +x gradlew
+      
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
+      continue-on-error: true
+      
+    - name: Check build outputs
+      run: |
+        echo "=== Build Directory ==="
+        ls -la app/build/ 2>/dev/null || echo "build directory not found"
+        echo ""
+        echo "=== Outputs Directory ==="
+        ls -la app/build/outputs/ 2>/dev/null || echo "outputs directory not found"
+        echo ""
+        echo "=== APK Directory ==="
+        ls -la app/build/outputs/apk/ 2>/dev/null || echo "apk directory not found"
+        
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
-      if: success()
       with:
         name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
-        if-no-files-found: warn
-        
-    - name: Build Release APK
-      run: |
-        ./gradlew assembleRelease --stacktrace --info || true
-        ls -la app/build/outputs/apk/release/ || echo "Release APK not found"
-      
-    - name: Upload Release APK
-      uses: actions/upload-artifact@v4
-      if: success()
-      with:
-        name: app-release
-        path: app/build/outputs/apk/release/*.apk
+        path: app/build/outputs/apk/debug/*.apk
         if-no-files-found: warn

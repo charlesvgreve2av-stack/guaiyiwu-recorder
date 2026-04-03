@@ -1,0 +1,4 @@
+com.guaiyiwu.test.app-androidTest-0 D:\鲸娱秘境\主题11：怪忆屋\AI修改后的文件\怪忆屋录音简版\app\build\generated\res\resValues\androidTest\debug
+com.guaiyiwu.test.app-mergeDebugAndroidTestResources-1 D:\鲸娱秘境\主题11：怪忆屋\AI修改后的文件\怪忆屋录音简版\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.guaiyiwu.test.app-mergeDebugAndroidTestResources-2 D:\鲸娱秘境\主题11：怪忆屋\AI修改后的文件\怪忆屋录音简版\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.guaiyiwu.test.app-merged_res-3 D:\鲸娱秘境\主题11：怪忆屋\AI修改后的文件\怪忆屋录音简版\app\build\intermediates\merged_res\debugAndroidTest

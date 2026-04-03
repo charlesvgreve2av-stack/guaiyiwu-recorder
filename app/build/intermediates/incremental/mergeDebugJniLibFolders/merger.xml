@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\鲸娱秘境\主题11：怪忆屋\AI修改后的文件\怪忆屋录音简版\app\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\鲸娱秘境\主题11：怪忆屋\AI修改后的文件\怪忆屋录音简版\app\src\debug\jniLibs"/></dataSet></merger>

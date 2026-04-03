@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- 状态文字 -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="准备就绪，点击屏幕开始录音"
+        android:textColor="#cccccc"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="24dp"
+        android:lineSpacingExtra="6dp"
+        android:elevation="1dp"/>
+
+    <!-- 全屏透明可点击区域 -->
+    <View
+        android:id="@+id/btnRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</FrameLayout>

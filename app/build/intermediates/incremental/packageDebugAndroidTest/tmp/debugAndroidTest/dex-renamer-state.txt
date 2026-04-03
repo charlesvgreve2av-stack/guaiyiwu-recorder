@@ -1,0 +1,4 @@
+#Tue Mar 24 17:59:11 CST 2026
+base.0=D\:\\鲸娱秘境\\主题11：怪忆屋\\AI修改后的文件\\怪忆屋录音简版\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

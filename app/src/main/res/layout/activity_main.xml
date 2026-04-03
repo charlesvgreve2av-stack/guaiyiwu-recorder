@@ -23,12 +23,12 @@
         android:lineSpacingExtra="6dp"
         android:elevation="1dp"/>
 
-    <!-- 全屏透明可点击区域 -->
+    <!-- 全屏蓝色可点击区域 -->
     <View
         android:id="@+id/btnRecord"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
+        android:background="#2196F3"
         android:clickable="true"
         android:focusable="true"/>
 
